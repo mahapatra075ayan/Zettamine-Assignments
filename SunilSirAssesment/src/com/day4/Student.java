@@ -38,6 +38,16 @@ public class Student {
 		this.phone = phone;
 	}
 	
+	public Student(int studentId, String name, int departmentId, String gender, String phone) {
+		super();
+		this.studentId = studentId;
+		this.name = name;
+		this.departmentId = departmentId;
+		this.gender = gender;
+		this.phone = phone;
+	}
 	
-
+	
+	
+	
 }
