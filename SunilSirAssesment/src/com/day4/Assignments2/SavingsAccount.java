@@ -1,4 +1,4 @@
-package com.day4;
+package com.day4.Assignments2;
 
 public class SavingsAccount extends Account{
 	
@@ -19,11 +19,6 @@ public class SavingsAccount extends Account{
 	}
 	
 	
-
-	public SavingsAccount() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	@Override
 	public boolean withdraw(double amount) {

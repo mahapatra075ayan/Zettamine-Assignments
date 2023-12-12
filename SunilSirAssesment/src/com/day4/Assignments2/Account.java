@@ -1,4 +1,4 @@
-package com.day4;
+package com.day4.Assignments2;
 
 public abstract class Account {
 	protected int accountNumber;
@@ -30,10 +30,7 @@ public abstract class Account {
 		this.balance = balance;
 	}
 	
-	public Account() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
 	public abstract boolean withdraw(double amount); 
 
 }

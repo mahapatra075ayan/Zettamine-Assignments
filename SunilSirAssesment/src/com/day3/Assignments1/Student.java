@@ -1,4 +1,4 @@
-package com.day3;
+package com.day3.Assignments1;
 
 public class Student {
 	protected int studentId;
@@ -6,6 +6,7 @@ public class Student {
 	protected int departmentId;
 	protected String gender;
 	protected String phone;
+	
 	public int getStudentId() {
 		return studentId;
 	}

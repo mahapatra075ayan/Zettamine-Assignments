@@ -1,4 +1,4 @@
-package com.day3;
+package com.day3.Assignments1;
 
 public class Hosteller extends Student{
 	

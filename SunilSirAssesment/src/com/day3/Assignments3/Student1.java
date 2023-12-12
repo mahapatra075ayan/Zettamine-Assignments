@@ -1,4 +1,4 @@
-package com.day3;
+package com.day3.Assignments3;
 
 public class Student1 {
 	static int id = 101;

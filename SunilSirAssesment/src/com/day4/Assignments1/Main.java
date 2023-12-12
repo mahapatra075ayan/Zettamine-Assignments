@@ -1,4 +1,4 @@
-package com.day4;
+package com.day4.Assignments1;
 
 import java.util.Scanner;
 
@@ -6,21 +6,22 @@ public class Main {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		
-		Hosteller hst = getHostellerDetails();
+		Student s = getHostellerDetails();
+		System.out.println();
 		System.out.println("The Student Details are as follows:");
 		System.out.println();
-		System.out.println("Student ID: "+hst.getStudent().getStudentId());
-		System.out.println("Student Name: "+hst.getStudent().getName());
-		System.out.println("Department ID: "+hst.getStudent().getDepartmentId());
-		System.out.println("Student Gender: "+hst.getStudent().getGender());
-		System.out.println("Student Phone No: "+hst.getStudent().getPhone());
-		System.out.println("Hostel Name: "+hst.getHostelName());
-		System.out.println("Room No: "+hst.getRoomNumber());
+		System.out.println("Student ID: "+s.getStudentId());
+		System.out.println("Student Name: "+s.getName());
+		System.out.println("Department ID: "+s.getDepartmentId());
+		System.out.println("Student Gender: "+s.getGender());
+		System.out.println("Student Phone No: "+s.getPhone());
+		System.out.println("Hostel Name: "+s.getHostel().getHostelName());
+		System.out.println("Room No: "+s.getHostel().getRoomNumber());
 		
 		
 	}
 	
-	public static Hosteller getHostellerDetails(){
+	public static Student getHostellerDetails(){
 		
 		System.out.print("Enter the Student Details & Hostel Details: ");
 		System.out.println();
@@ -36,14 +37,13 @@ public class Main {
 		System.out.print("Phone Number: ");
 		String phone = sc.next();
 		
-		Student s1 = new Student(sId, name, deptId, gender, phone);
-		
 		System.out.print("Hostel Name: ");
 		String hostelName = sc.next();
 		System.out.print("Room Number: ");
 		int roomNo = sc.nextInt();
 		
-		Hosteller hstl = new Hosteller(hostelName, roomNo,s1); 
+		Hosteller hstl = new Hosteller(hostelName, roomNo);
+		Student student = new Student(sId ,name, deptId, gender, phone, hstl);
 		
 		System.out.print("Modify Room Number(Y/N): ");
 		String modifyRoomNoChoice = sc.next();
@@ -51,19 +51,16 @@ public class Main {
 			System.out.print("New Room Number: ");
 			hstl.setRoomNumber(sc.nextInt());
 			
-		}else if(modifyRoomNoChoice.equalsIgnoreCase("N")){
-			System.exit(0);
 		}
+		
 		System.out.print("Modify Phone Number(Y/N): ");
 		String modifyPhoneChoice = sc.next();
 		if(modifyPhoneChoice.equalsIgnoreCase("Y")) {
 			System.out.print("New Phone Number: ");
-			s1.setPhone(sc.next());
-		}else if(modifyPhoneChoice.equalsIgnoreCase("N")) {
-			System.exit(0);
+			student.setPhone(sc.next());
 		}
 		
-		return hstl;
+		return student;
 		
 	}
 
